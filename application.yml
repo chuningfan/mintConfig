@@ -1,0 +1,19 @@
+server:
+  port: 9999
+spring: 
+  application:
+    name: mint-config
+  cloud: 
+    config: 
+      label: master 
+      server: 
+        default-application-name: @pom.artifactId@ 
+        git: 
+          uri: https://github.com/chuningfan/mintConfig
+          search-paths: config
+          username:
+          password:
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eureka/
